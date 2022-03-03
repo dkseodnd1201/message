@@ -37,10 +37,12 @@ public class MessageSourceTest {
         assertThat(result).isEqualTo("기본 메시지");
     }
 
+
+    // Spring을 매개변수로 전달
     @Test
     void argumentMessage() {
-        String message = ms.getMessage("hello.name", new Object[]{"String"}, null);
-        assertThat(message).isEqualTo("안녕 spring");
+        String message = ms.getMessage("hello.name", new Object[]{"Spring"}, null);
+        assertThat(message).isEqualTo("안녕 Spring");
     }
 
     @Test
